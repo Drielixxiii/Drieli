@@ -68,6 +68,7 @@ ul {
   align-items: center;
 }
 
+
 .intro img {
   display: block;
   max-width: 100%;
@@ -99,13 +100,16 @@ ul {
   font-weight: bold;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .intro {
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
+
   .intro-resume h1 {
     font-size: 3rem;
   }
+
   .intro-resume h1::before {
     height: 40px;
     width: 40px;
@@ -114,30 +118,37 @@ ul {
   }
 }
 
-@media (max-width: 1100px) {
-  .intro {
-    gap: 2rem;
-  }
-  .intro-resume h1 {
-    font-size: 36px;
-  }
-  .intro-resume h1::before {
-    height: 35px;
-    width: 35px;
-    top: -10px;
-    left: -15px;
-  }
-}
 
-@media (max-width: 600px) {
-  .intro-resume h1 {
-    font-size: 24px;
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
+
+  .intro-resume h1 {
+    font-size: 3rem;
+  }
+
   .intro-resume h1::before {
     height: 25px;
     width: 25px;
-    top: -8px;
-    left: -10px;
+    top: 1px;
+    left: -5px;
+  }
+}
+
+@media(max-width:600px) {
+  .intro {
+    gap: 2rem;
+  }
+
+  .intro-resume h1 {
+    font-size: 2rem;
+  }
+
+  .intro-resume h1::before {
+    top: -5px;
+    left: -10 px;
   }
 }
 
@@ -323,6 +334,7 @@ li {
   color: #888155;
   font-weight: 500;
 }
+
 .formacao .resume span {
   color: #e79796;
   font-weight: 600;
