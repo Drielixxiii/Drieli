@@ -58,7 +58,8 @@ ul {
   border: 5px solid#F0F0F0;
 }
 
-.intro {
+.intro,
+.experiencia {
   max-width: 1200px;
   padding: 40px 20px;
   margin: 0 auto;
@@ -66,8 +67,8 @@ ul {
   grid-template-columns: 1fr 2fr;
   gap: 5.25rem;
   align-items: center;
+  position: relative;
 }
-
 
 .intro img {
   display: block;
@@ -118,7 +119,6 @@ ul {
   }
 }
 
-
 @media (max-width: 800px) {
   .intro {
     grid-template-columns: 1fr 1fr;
@@ -137,7 +137,7 @@ ul {
   }
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
   .intro {
     gap: 2rem;
   }
@@ -152,10 +152,6 @@ ul {
   }
 }
 
-.experiencia {
-  position: relative;
-}
-
 .experiencia h1 {
   color: #f0f0f0;
   font-size: 7rem;
@@ -167,47 +163,96 @@ ul {
   max-width: 300px;
 }
 
-.experiencia h1::before {
+/* .experiencia h1::before {
   content: '';
   background-color: #e79796;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   position: absolute;
-  top: 9rem;
-  left: -5px;
+  top: 220px;
+  left: 18px;
   z-index: -1;
+} */
+
+.empresa-resume-principal {
+  position: relative;
+  left: 1rem;
 }
 
-.experiencia-resume span,
-ul span {
-  font-weight: 500;
+.empresa-resume-principal::after {
+  content: '____________________________________________________________________________________';
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: -20px;
+  left: 1px;
+}
+.empresa-resume strong {
   color: #e79796;
 }
 
-.categories p {
-  font-weight: 500;
-  background-color: #f7bdbc;
-  border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-ul {
-  margin-top: 2rem;
-}
-
-li {
+.empresa {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 5px;
+  padding: 15px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.empresa-ano {
+  position: absolute;
+  text-align: end;
+  top: 33px;
+  left: -100px;
+  color: #acacac;
+  font-size: 1rem;
+}
+
+/* .empresa::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#ffe8e7, #e79796);
+  position: absolute;
+  top: 33px;
+  left: -5px;
+} */
+
+.empresa-titulo {
+  font-weight: bold;
+  line-height: 1.3;
+  font-size: 14px;
+}
+
+.habilidades {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.habilidades li {
+  border-radius: 30px;
+  background-color: #e79796;
+  color: white;
+  padding: 5px 10px;
 }
 
 .projetos {
   position: relative;
   gap: 2rem;
-  /* grid-template-columns: repeat(auto-fit minmax(150px, 1fr)); */
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5.25rem;
+  align-items: center;
 }
 
 .projetos h1 {
@@ -217,7 +262,6 @@ li {
   word-wrap: break-word;
   line-height: 1.3;
   text-align: end;
-  /* padding: 2rem 1rem; */
   max-width: 400px;
   position: relative;
 }
@@ -240,14 +284,14 @@ li {
   padding: 5px 5px;
 }
 
-.projetos-grid a {
+.projetos-grid li {
   padding: 5px 15px;
   border-radius: 40px 40px 40px 5px;
-  background-color: #f7bdbc;
   transition: 0.3s;
+  background-color: #f7bdbc;
 }
 
-.projetos-grid a:hover {
+.projetos-grid li:hover {
   background-color: #e79796;
 }
 
@@ -270,15 +314,23 @@ li {
   color: #888155;
 }
 
-.formacao-flex {
-  display: flex;
-  gap: 10px;
+.back {
+  max-width: 100%;
+  background-color: #f5cec7;
+  z-index: -1;
 }
 
 .formacao {
   position: relative;
   background-color: #f5cec7;
-  z-index: 1;
+  z-index: 0;
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* gap: 5.25rem; */
+  /* align-items: center; */
 }
 
 .formacao h1 {
@@ -292,7 +344,7 @@ li {
   max-width: 350px;
 }
 
-.formacao h1::before {
+/* .formacao h1::before {
   content: '';
   background-color: #888155;
   height: 50px;
@@ -302,14 +354,22 @@ li {
   top: 8rem;
   left: -3px;
   z-index: -1;
+} */
+
+.formacao-flex {
+  display: flex;
+  gap: 10px;
 }
 
+/* .formacao-flex .estudo{
+
+} */
+/* 
 .formacao-flex li {
   padding: 5px 15px;
   border-radius: 40px 40px 40px 5px;
   background-color: #f7bdbc;
-  transition: 0.3s;
-}
+} */
 
 .title-formacao {
   color: #888155;
@@ -330,14 +390,14 @@ li {
   font-size: 14px;
 }
 
-.formacao .resume {
+.formacao-resume-principal {
   color: #888155;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
-.formacao .resume span {
+.formacao-resume-principal strong {
   color: #e79796;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .idioms {
