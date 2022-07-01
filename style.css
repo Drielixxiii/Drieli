@@ -535,3 +535,75 @@ footer {
     content: '__________________________________________________________________';
   }
 }
+
+@media (max-width: 500px) {
+  .header img {
+    max-width: 200px;
+  }
+
+  .intro {
+    gap: 1rem;
+  }
+
+  .experiencia h1,
+  .projetos h1,
+  .formacao h1 {
+    font-size: 3rem;
+  }
+
+  .formacao-flex {
+    display: grid;
+    margin: 0 auto;
+  }
+  .estudo {
+    height: 180px;
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  .empresa-resume-principal::after {
+    content: '___________________________________________';
+  }
+
+  .projetos .title,
+  .situation,
+  .estudo .titulo-formacao,
+  .local-formacao {
+    font-size: 14px;
+  }
+
+  .projetos .name {
+    font-size: 1.3rem;
+  }
+
+  .estudo .name-formacao {
+    font-size: 1.2rem;
+  }
+
+  .contato {
+    gap: 2rem;
+    margin: 10px;
+  }
+
+  .contatos-rapidos h2 {
+    padding: 1rem 1rem;
+  }
+
+  .contato h2 {
+    font-size: 1.3rem;
+  }
+
+  .contato a {
+    font-size: 1rem;
+  }
+
+  .links-flex {
+    gap: 10px;
+    padding: 5px 5px;
+  }
+
+  .links-flex a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
