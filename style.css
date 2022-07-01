@@ -259,7 +259,6 @@ ul {
 
 .projetos {
   position: relative;
-  gap: 2rem;
   max-width: 1200px;
   padding: 40px 20px;
   margin: 0 auto;
@@ -310,10 +309,12 @@ ul {
   background-color: #e79796;
 }
 
-.title {
+.title,
+.titulo-formacao {
   color: #888155;
   font-weight: 500;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 .name {
@@ -324,7 +325,9 @@ ul {
 }
 
 .situation::before,
-.situation {
+.situation,
+.local-formacao::before,
+.local-formacao {
   content: '• ';
   color: #888155;
 }
@@ -344,8 +347,16 @@ ul {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  /* gap: 5.25rem; */
+  gap: 5.25rem;
   /* align-items: center; */
+}
+
+.idioms span {
+  position: absolute;
+  bottom: 10rem;
+  left: 430px;
+  color: #888155;
+  font-size: 1.4rem;
 }
 
 .formacao h1 {
@@ -414,14 +425,48 @@ ul {
   /* font-weight: 600; */
 }
 
+.formacao-flex {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* gap: 10px; */
+  /* justify-content: center; */
+  padding: 5px 5px;
+  word-wrap: break-word;
+}
+
+.estudo {
+  padding: 5px 15px;
+  height: 250px;
+  width: 250px;
+  border-radius: 40px 40px 40px 5px;
+  transition: 0.3s;
+  background-color: #f7bdbc;
+  word-wrap: break-word;
+}
+
+/* .estudo .local-formacao {
+  align-items: end;
+  align-self: end;
+  align-content: end;
+  place-content: end;
+  place-items: end;
+  place-self: end;
+  justify-content: end;
+  justify-items: end;
+  justify-self: end;
+} */
+
 .idioms {
   color: #e79796;
 }
 
 .contato {
-  padding: 1rem 1rem;
-  margin-bottom: 3rem;
+  display: grid;
   justify-items: center;
+  gap: 4rem;
+  /* padding: 1rem 1rem;
+  margin-bottom: 3rem;
+  justify-items: center; */
 }
 
 .contatos-rapidos h2 {
@@ -468,6 +513,8 @@ ul {
 }
 
 footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   max-width: 100%;
   color: #979797;
   text-align: center;
